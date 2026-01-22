@@ -85,7 +85,7 @@ MIT License
 # **📦 FINAL FILE ORGANIZATION**
 
 Create this structure before zipping:
-```
+```text
 BAT-Track-Project/
 │
 ├── README.md                              # ⭐ Professional documentation
