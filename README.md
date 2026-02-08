@@ -1,6 +1,6 @@
 # BAT-Track: Battery-Aware Adaptive Visual Tracking for UAVs
 
-Official implementation of "BAT-Track: Battery-Aware Adaptive Visual Tracking for Resource-Constrained UAVs" (IEEE Access 2026).
+Official implementation of "BAT-Track: Battery-Aware Adaptive Visual Tracking for Resource-Constrained UAVs".
 
 ## Overview
 
@@ -12,6 +12,53 @@ BAT-Track is a novel battery-aware adaptive tracking system that dynamically swi
 - **60.5% energy savings** compared to OSTrack baseline
 - **Real-time performance** at 39.3 FPS
 - **6.1% accuracy improvement** over pure efficient tracker
+
+## 🎬 Demo Videos
+<div align="center">
+Adaptive Tracker Switching in Action
+BAT-Track dynamically switches between OSTrack (🔋 >70%, 🟡 Yellow BBox) and SiamAPN++ (🔋 ≤70%, 🔴 Red BBox) based on real-time battery levels.
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>🏢 Building Tracking</b><br>
+      <sub>Structure monitoring with battery-aware adaptation</sub><br><br>
+      <video src="./videos/Building4_Switch.mp4" width="100%" controls muted loop playsinline></video>
+    </td>
+    <td align="center" width="50%">
+      <b>🚗 Vehicle Tracking</b><br>
+      <sub>High-speed ground vehicle tracking</sub><br><br>
+      <video src="./videos/Car14_Switch.mp4" width="100%" controls muted loop playsinline></video>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>🚶 Person Tracking</b><br>
+      <sub>Pedestrian surveillance & monitoring</sub><br><br>
+      <video src="./videos/Person16_Switch.mp4" width="100%" controls muted loop playsinline></video>
+    </td>
+    <td align="center" width="50%">
+      <b>🚛 Truck Tracking</b><br>
+      <sub>Heavy vehicle logistics tracking</sub><br><br>
+      <video src="./videos/Truck4_1_Switch.mp4" width="100%" controls muted loop playsinline></video>
+    </td>
+  </tr>
+</table>
+🔋 Real-time Policy Visualization
+<p align="center">
+  <b>Policy Switching Decision Process</b><br>
+  <sub>Visualizing the battery-aware decision policy in real-time</sub><br><br>
+  <video src="./videos/uav_truck1_policy_switch.mp4" width="80%" controls muted loop playsinline></video>
+</p>
+</div>
+
+
+## Color Coding Legend
+
+|     Color     |  Tracker  | Battery Condition |                Use Case                |
+| :-----------: | :-------: | :---------------: | :------------------------------------: |
+| 🟡 **Yellow** |  OSTrack  |       > 70%       |   High-accuracy mode (complex scenes)  |
+|   🔴 **Red**  | SiamAPN++ |       ≤ 70%       | Energy-efficient mode (battery saving) |
+
 
 ## Requirements
 ```bash
@@ -59,15 +106,6 @@ python evaluate_battrack.py --dataset UAV123 --output results.csv
 | SiamAPN++ | 58.1% | 15.62 | 66.7% | 64.9 |
 | **BAT-Track** | **64.2%** | **18.51** | **60.5%** | **39.3** |
 
-## Citation
-```bibtex
-@article{battrack2026,
-  title={BAT-Track: Battery-Aware Adaptive Visual Tracking for Resource-Constrained UAVs},
-  author={Your Name},
-  journal={IEEE Access},
-  year={2026}
-}
-```
 
 ## Acknowledgments
 
