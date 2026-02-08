@@ -14,51 +14,31 @@ BAT-Track is a novel battery-aware adaptive tracking system that dynamically swi
 - **6.1% accuracy improvement** over pure efficient tracker
 
 ## 🎬 Demo Videos
-<div align="center">
-Adaptive Tracker Switching in Action
-BAT-Track dynamically switches between OSTrack (🔋 >70%, 🟡 Yellow BBox) and SiamAPN++ (🔋 ≤70%, 🔴 Red BBox) based on real-time battery levels.
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <b>🏢 Building Tracking</b><br>
-      <sub>Structure monitoring with battery-aware adaptation</sub><br><br>
-      <video src="./videos/Building4_Switch.mp4" width="100%" controls muted loop playsinline></video>
-    </td>
-    <td align="center" width="50%">
-      <b>🚗 Vehicle Tracking</b><br>
-      <sub>High-speed ground vehicle tracking</sub><br><br>
-      <video src="./videos/Car14_Switch.mp4" width="100%" controls muted loop playsinline></video>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <b>🚶 Person Tracking</b><br>
-      <sub>Pedestrian surveillance & monitoring</sub><br><br>
-      <video src="./videos/Person16_Switch.mp4" width="100%" controls muted loop playsinline></video>
-    </td>
-    <td align="center" width="50%">
-      <b>🚛 Truck Tracking</b><br>
-      <sub>Heavy vehicle logistics tracking</sub><br><br>
-      <video src="./videos/Truck4_1_Switch.mp4" width="100%" controls muted loop playsinline></video>
-    </td>
-  </tr>
-</table>
-🔋 Real-time Policy Visualization
-<p align="center">
-  <b>Policy Switching Decision Process</b><br>
-  <sub>Visualizing the battery-aware decision policy in real-time</sub><br><br>
-  <video src="./videos/uav_truck1_policy_switch.mp4" width="80%" controls muted loop playsinline></video>
-</p>
-</div>
 
 
-## Color Coding Legend
 
-|     Color     |  Tracker  | Battery Condition |                Use Case                |
-| :-----------: | :-------: | :---------------: | :------------------------------------: |
-| 🟡 **Yellow** |  OSTrack  |       > 70%       |   High-accuracy mode (complex scenes)  |
-|   🔴 **Red**  | SiamAPN++ |       ≤ 70%       | Energy-efficient mode (battery saving) |
+### Adaptive Tracker Switching in Action
 
+BAT-Track dynamically switches between **OSTrack** (🔋 &gt;70%, 🟡 **Yellow BBox**) and **SiamAPN++** (🔋 ≤70%, 🔴 **Red BBox**) based on real-time battery levels.
+
+| Building | Car |
+|:---:|:---:|
+| [![Building](https://img.youtube.com/vi/Tf39Zdd8d5Y/0.jpg)](https://youtu.be/Tf39Zdd8d5Y) | [![Car](https://img.youtube.com/vi/fJssBVbzK2k/0.jpg)](https://youtu.be/fJssBVbzK2k) |
+| **🏢 Building Tracking** | **🚗 Vehicle Tracking** |
+| Structure monitoring | High-speed ground tracking |
+
+| Person | Truck |
+|:---:|:---:|
+| [![Person](https://img.youtube.com/vi/lVudh3ygCnA/0.jpg)](https://youtu.be/lVudh3ygCnA) | [![Truck](https://img.youtube.com/vi/u-kuVsdbiMo/0.jpg)](https://youtu.be/u-kuVsdbiMo) |
+| **🚶 Person Tracking** | **🚛 Truck Tracking** |
+| Pedestrian surveillance | Heavy vehicle logistics |
+
+
+### 🎨 Color Coding Legend
+| Color | Tracker | Battery Condition | Characteristics |
+|:-----:|:-------:|:-----------------:|:---------------|
+| 🟡 **Yellow** | OSTrack | &gt; 70% | High accuracy, higher energy |
+| 🔴 **Red** | SiamAPN++ | ≤ 70% | Energy-efficient, faster FPS |
 
 ## Requirements
 ```bash
